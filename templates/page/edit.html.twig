@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Wijzig{% endblock %}
+
+{% block content %}
+    {{ include('page/_form.html.twig', {submit_label: 'Wijzig'}) }}
+    {{ include('_delete_confirmation.html.twig', {
+        entityName: 'pagina',
+        warning: 'Weet u zeker dat u deze pagina wilt verwijderen?'
+    }) }}
+{% endblock %}

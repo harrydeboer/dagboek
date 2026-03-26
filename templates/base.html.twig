@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <title>{% block title %}{% endblock %}</title>
+    {{ include('_head.html.twig') }}
+    {% block stylesheets %}
+    {% endblock %}
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-auto"><img alt="Logo" src="{{ asset('/img/Logo_100.jpg') }}"></div>
+        <div class="col"><h1 id="dagboek_title">Dagboek</h1></div>
+    </div>
+</div>
+{% block nav %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbar_supported_content"
+                    aria-controls="navbar_supported_content"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar_supported_content">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li><a href="{{ path('homepage') }}">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+{% endblock %}
+<div class="container">
+    {% block content %}
+    {% endblock %}
+</div>
+{% block javascripts %}
+{% endblock %}
+</body>
+</html>

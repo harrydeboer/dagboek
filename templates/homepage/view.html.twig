@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dagboek{% endblock %}
+
+{% block content %}
+    <a href="{{ path('page_create') }}">Maak een pagina</a>
+    <div class="div-striped">
+        {% for page in pages %}
+            <div class="row">
+                <div class="col">{{ page.date|date('d-M-Y') }}</div>
+                <div class="col">
+                    <a href="{{ path('page_edit', {'id': page.id}) }}">wijzig</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
