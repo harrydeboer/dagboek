@@ -1,16 +1,20 @@
-<div class="modal delete-modal">
+<button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Verwijder {{ entityName }}
+</button>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h3>{{ warning }}</h3>
+            </div>
+            <div class="modal-body">
                 {{ form_start(formDelete) }}
                 {{ form_widget(formDelete.delete, { 'label': 'Verwijder' }) }}
                 {{ form_end(formDelete) }}
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Sluiten</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
             </div>
         </div>
     </div>
 </div>
-<button class="btn btn-danger delete-modal-button">Verwijder {{ entityName }}</button>

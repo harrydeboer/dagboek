@@ -14,10 +14,5 @@ import 'bootstrap';
 import './styles/app.css';
 
 $(function() {
-    const myModal = document.getElementsByClassName('delete-modal')[0]
-    const myInput = document.getElementsByClassName('delete-modal-button')[0]
 
-    myModal.addEventListener('shown.bs.modal', () => {
-        myInput.focus()
-    })
 });
