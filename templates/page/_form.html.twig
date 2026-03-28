@@ -2,15 +2,21 @@
 <div id="form_errors_server">
     {{ form_errors(form) }}
     {{ form_errors(form.date) }}
-    {{ form_errors(form.rating) }}
+    {{ form_errors(form.rating_morning) }}
+    {{ form_errors(form.rating_afternoon) }}
+    {{ form_errors(form.rating_evening) }}
     {{ form_errors(form.content_positive) }}
     {{ form_errors(form.content_negative) }}
 </div>
 {{ form_start(form) }}
 <div class="fw-bold">{{ form_label(form.date) }}</div>
 {{ form_widget(form.date) }}
-<div class="fw-bold">{{ form_label(form.rating) }}</div>
-{{ form_widget(form.rating) }}
+<div class="fw-bold">{{ form_label(form.rating_morning) }}</div>
+{{ form_widget(form.rating_morning) }}
+<div class="fw-bold">{{ form_label(form.rating_afternoon) }}</div>
+{{ form_widget(form.rating_afternoon) }}
+<div class="fw-bold">{{ form_label(form.rating_evening) }}</div>
+{{ form_widget(form.rating_evening) }}
 <div class="fw-bold">{{ form_label(form.content_positive) }}</div>
 {{ form_widget(form.content_positive) }}
 <div class="fw-bold">{{ form_label(form.content_negative) }}</div>

@@ -25,9 +25,21 @@ class PageType extends AbstractType
                 'label_attr' => ['class' => 'col-form-label'],
                 'attr' => ['class' => 'form-control'],
             ])
-            ->add('rating', IntegerType::class, [
+            ->add('rating_morning', IntegerType::class, [
                 'attr' => ['class' => 'form-control'],
-                'label' => 'Kleur',
+                'label' => 'Kleur ochtend',
+                'label_attr' => ['class' => 'col-form-label'],
+                'required' => false,
+            ])
+            ->add('rating_afternoon', IntegerType::class, [
+                'attr' => ['class' => 'form-control'],
+                'label' => 'Kleur middag',
+                'label_attr' => ['class' => 'col-form-label'],
+                'required' => false,
+            ])
+            ->add('rating_evening', IntegerType::class, [
+                'attr' => ['class' => 'form-control'],
+                'label' => 'Kleur avond',
                 'label_attr' => ['class' => 'col-form-label'],
                 'required' => false,
             ])

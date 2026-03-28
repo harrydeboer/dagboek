@@ -31,7 +31,17 @@ class Page
     #[
         ORM\Column(type: "integer"),
     ]
-    private int $rating;
+    private int $ratingMorning;
+
+    #[
+        ORM\Column(type: "integer"),
+    ]
+    private int $ratingAfternoon;
+
+    #[
+        ORM\Column(type: "integer"),
+    ]
+    private int $ratingEvening;
 
     #[
         ORM\Column(type: "text", nullable: true),
@@ -63,14 +73,34 @@ class Page
         $this->date = $date;
     }
 
-    public function getRating(): int
+    public function getRatingMorning(): int
     {
-        return $this->rating;
+        return $this->ratingMorning;
     }
 
-    public function setRating(int $rating): void
+    public function setRatingMorning(int $rating): void
     {
-        $this->rating = $rating;
+        $this->ratingMorning = $rating;
+    }
+
+    public function getRatingAfternoon(): int
+    {
+        return $this->ratingAfternoon;
+    }
+
+    public function setRatingAfternoon(int $rating): void
+    {
+        $this->ratingAfternoon = $rating;
+    }
+
+    public function getRatingEvening(): int
+    {
+        return $this->ratingEvening;
+    }
+
+    public function setRatingEvening(int $rating): void
+    {
+        $this->ratingEvening = $rating;
     }
 
     public function getContentPositive(): string
