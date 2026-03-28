@@ -53,6 +53,7 @@ class PageType extends AbstractType
                 'attr' => ['class' => 'form-control', 'rows' => 20],
                 'label' => 'Negatief',
                 'label_attr' => ['class' => 'col-form-label'],
+                'required' => false,
             ])
             ->add('submit', SubmitType::class, [
                 'attr' => ['class' => 'btn btn-success'],

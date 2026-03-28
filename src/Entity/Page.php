@@ -31,17 +31,17 @@ class Page
     #[
         ORM\Column(type: "integer"),
     ]
-    private int $ratingMorning;
+    private ?int $ratingMorning = null;
 
     #[
         ORM\Column(type: "integer"),
     ]
-    private int $ratingAfternoon;
+    private ?int $ratingAfternoon = null;
 
     #[
         ORM\Column(type: "integer"),
     ]
-    private int $ratingEvening;
+    private ?int $ratingEvening = null;
 
     #[
         ORM\Column(type: "text", nullable: true),
@@ -78,7 +78,7 @@ class Page
         return $this->ratingMorning;
     }
 
-    public function setRatingMorning(int $rating): void
+    public function setRatingMorning(?int $rating): void
     {
         $this->ratingMorning = $rating;
     }
@@ -88,7 +88,7 @@ class Page
         return $this->ratingAfternoon;
     }
 
-    public function setRatingAfternoon(int $rating): void
+    public function setRatingAfternoon(?int $rating): void
     {
         $this->ratingAfternoon = $rating;
     }
@@ -98,7 +98,7 @@ class Page
         return $this->ratingEvening;
     }
 
-    public function setRatingEvening(int $rating): void
+    public function setRatingEvening(?int $rating): void
     {
         $this->ratingEvening = $rating;
     }
