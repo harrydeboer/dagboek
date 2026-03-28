@@ -29,17 +29,17 @@ class Page
     private DateTime $date;
 
     #[
-        ORM\Column(type: "integer"),
+        ORM\Column(type: "integer", nullable: true),
     ]
     private ?int $ratingMorning = null;
 
     #[
-        ORM\Column(type: "integer"),
+        ORM\Column(type: "integer", nullable: true),
     ]
     private ?int $ratingAfternoon = null;
 
     #[
-        ORM\Column(type: "integer"),
+        ORM\Column(type: "integer", nullable: true),
     ]
     private ?int $ratingEvening = null;
 
